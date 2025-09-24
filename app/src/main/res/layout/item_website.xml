@@ -1,12 +1,31 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/websiteTitle"
-    android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
     android:layout_height="120dp"
-    android:gravity="center"
-    android:background="@android:color/holo_blue_dark"
-    android:textColor="@android:color/white"
-    android:textSize="20sp"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
+    android:layout_margin="8dp"
     android:clickable="true"
-    android:layout_margin="8dp"/>
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- Hintergrundbild (optional PNG oder Fallback-Farbe) -->
+    <ImageView
+        android:id="@+id/backgroundImageName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Titel in der Mitte -->
+    <TextView
+        android:id="@+id/websiteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/textapp"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:background="@color/app"
+        tools:text="Tagesschau" />
+
+</FrameLayout>
