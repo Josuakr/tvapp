@@ -15,15 +15,15 @@ fun SchubTheme(
 ) {
     val colorScheme = if (isInDarkTheme) {
         darkColorScheme(
-            primary = Purple80,
-            secondary = PurpleGrey80,
-            tertiary = Pink80
+            primary = appColor,
+            secondary = backgroundColor,
+            tertiary = transparent
         )
     } else {
         lightColorScheme(
-            primary = Purple40,
-            secondary = PurpleGrey40,
-            tertiary = Pink40
+            primary = backgroundColor,
+            secondary = appColor,
+            tertiary = apptextColor
         )
     }
     MaterialTheme(
